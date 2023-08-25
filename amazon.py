@@ -6,7 +6,7 @@ produto = str(input("Qual produto deseja: "))
 navegador = requests.get(url+produto)
 navegador = BeautifulSoup(navegador.text, "html.parser")
 
-#prega todas as divs que tem esse atributo (cards)
+#pega todas as divs que tem esse atributo (cards)
 pesquisas = navegador.find_all('div', attrs={'data-component-type':'s-search-result'})
 
 #Intera sobe cada div e pega os elementos desejados
